@@ -90,9 +90,9 @@ www.use(function(req,res,next){
 
     if(req.url === '/off'){
         www.off();
-        send(500);
+        res.send(500);
     }else{
-        send(200);
+        res.send(200);
     }    
 });
 
