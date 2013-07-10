@@ -69,7 +69,7 @@ var www = vhost('www.*');
 app.use(www);
 
 somethingGoodHappens(function(){
-    www.on(); // disable www
+    www.on(); // re-enable www
 });
 ```
 
