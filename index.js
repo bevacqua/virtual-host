@@ -23,7 +23,7 @@ module.exports = function(factory){
         var rhost = buildHostRegex(hostname);
 
         var middleware = function(req, res, next){
-            if(middleware.on === false){
+            if(middleware._on === false){
                 return next();
             }
 
@@ -45,11 +45,11 @@ module.exports = function(factory){
         middleware.server = factory();
 
         middleware.off = function(){
-            middleware.on = false;
+            middleware._on = false;
         };
 
         middleware.on = function(){
-            middleware.on = true;
+            middleware._on = true;
         };
 
         return middleware;
